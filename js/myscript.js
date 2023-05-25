@@ -40,20 +40,31 @@ function addZero(x,n) {
     //creo una variabile che indichi la data da cui parte il countdown
 const futureTime = new Date ("May 26, 2023 09:30:00").getTime();
 
-//creo variabile dove mi indica tempo attuale
-const actualTime = Date.now();
+const clock = setInterval(function(){
 
 
-//sottraggo il future time con actualtime --> ottengo il tempo in ms
-const timeLeft = futureTime - actualTime;
+    //creo variabile dove mi indica tempo attuale
+    const actualTime = Date.now();
 
-let dayLeft = Math.floor (timeLeft/1000/60/60/24);
-console.log(dayLeft);
-let hoursLeft = Math.floor(timeLeft/1000/60/60);
-console.log(hoursLeft);
-let minutesLeft = Math.floor((timeLeft/1000/60/60 - hoursLeft)*60);
-console.log(minutesLeft)
-let secondsLeft = Math.floor (((timeLeft/1000/60/60 - hoursLeft) *60 - minutesLeft) * 60);
-console.log(secondsLeft);
+    //sottraggo il future time con actualtime --> ottengo il tempo in ms
+    const timeLeft = futureTime - actualTime;
+
+
+    let dayLeft = Math.floor (timeLeft / 1000 / 60/ 60 / 24);
+    console.log(dayLeft);
+    let hoursLeft = Math.floor(timeLeft / 1000 / 60 / 60);
+    console.log(hoursLeft);
+    let minutesLeft = Math.floor((timeLeft / 1000 / 60 / 60 - hoursLeft) * 60);
+    console.log(minutesLeft)
+    let secondsLeft = Math.floor (((timeLeft / 1000 / 60 / 60 - hoursLeft) *60 - minutesLeft) * 60);
+    console.log(secondsLeft);
+
+});
+
+setTimeout(function(){
+    alert("Lesson is started!!!!");
+    clearInterval(clock);
+})
+
 
 
