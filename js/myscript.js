@@ -37,15 +37,18 @@ function addZero(x,n) {
     }*/
 
 
+    //creo una variabile che indichi la data da cui parte il countdown
 const futureTime = new Date ("May 26, 2023 09:30:00").getTime();
 
-const actualeTime = Date.now();
+//creo variabile dove mi indica tempo attuale
+const actualTime = Date.now();
 
 
+//sottraggo il future time con actualtime --> ottengo il tempo in ms
+const timeLeft = futureTime - actualTime;
 
-const timeLeft = futureTime - actualeTime;
-console.log(timeLeft)
-
+let dayLeft = Math.floor (timeLeft/1000/60/60/24);
+console.log(dayLeft);
 let hoursLeft = Math.floor(timeLeft/1000/60/60);
 console.log(hoursLeft);
 let minutesLeft = Math.floor((timeLeft/1000/60/60 - hoursLeft)*60);
