@@ -8,3 +8,9 @@ main div{
     width: 700px;
     background-color: #e6e6fa;
 }
+
+div p{
+    font-weight: 600;
+    font-size: xx-large;
+    margin: 0 auto;
+}

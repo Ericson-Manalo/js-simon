@@ -59,12 +59,15 @@ const clock = setInterval(function(){
     let secondsLeft = Math.floor (((timeLeft / 1000 / 60 / 60 - hoursLeft) *60 - minutesLeft) * 60);
     console.log(secondsLeft);
 
-});
+    let timeRemaining = dayLeft + ":" + hoursLeft + ":" + minutesLeft + ":" + secondsLeft;
+    document.getElementById('time-left').innerHTML = timeRemaining;
+
+}, 1000);
 
 setTimeout(function(){
     alert("Lesson is started!!!!");
     clearInterval(clock);
-})
+}, futureTime);
 
 
 
