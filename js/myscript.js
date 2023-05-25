@@ -15,7 +15,7 @@ Esistono dei metodi per trasformare una data in millisecondi?Buon divertimento a
 
 //creo variabile che mi indichi l'ora esatta in questo momento
 
-const actualTime = new Date ();
+/*const actualTime = new Date ();
 let actualDay = addZero (actualTime.getDay(), 2);
 let actualHours = addZero(actualTime.getHours(), 2);
 let actualMinutes = addZero(actualTime.getMinutes(), 2);
@@ -27,9 +27,30 @@ document.getElementById('actual-time').innerHTML = time;
 
 
 
+
+
 function addZero(x,n) { 
     while (x.toString().length < n) {
         x = "0" + x;
     }
     return x;
-    }
+    }*/
+
+
+const futureTime = new Date ("May 26, 2023 09:30:00").getTime();
+
+const actualeTime = Date.now();
+
+
+
+const timeLeft = futureTime - actualeTime;
+console.log(timeLeft)
+
+let hoursLeft = Math.floor(timeLeft/1000/60/60);
+console.log(hoursLeft);
+let minutesLeft = Math.floor((timeLeft/1000/60/60 - hoursLeft)*60);
+console.log(minutesLeft)
+let secondsLeft = Math.floor (((timeLeft/1000/60/60 - hoursLeft) *60 - minutesLeft) * 60);
+console.log(secondsLeft);
+
+
