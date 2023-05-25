@@ -13,29 +13,6 @@ Quanti millisecondi mi separano da domani alle 9:30?
 Esiste un oggetto JS in grado di gestire le date?
 Esistono dei metodi per trasformare una data in millisecondi?Buon divertimento a tutte e a tutti!*/
 
-//creo variabile che mi indichi l'ora esatta in questo momento
-
-/*const actualTime = new Date ();
-let actualDay = addZero (actualTime.getDay(), 2);
-let actualHours = addZero(actualTime.getHours(), 2);
-let actualMinutes = addZero(actualTime.getMinutes(), 2);
-let actualSeconds = addZero(actualTime.getSeconds(), 2);
-
-let time = actualDay + ":" + actualHours + ":" + actualMinutes + ":" + actualSeconds;
-document.getElementById('actual-time').innerHTML = time;
-
-
-
-
-
-
-function addZero(x,n) { 
-    while (x.toString().length < n) {
-        x = "0" + x;
-    }
-    return x;
-    }*/
-
 
     //creo una variabile che indichi la data da cui parte il countdown
 const futureTime = new Date ("May 26, 2023 09:30:00").getTime();
@@ -65,7 +42,7 @@ const clock = setInterval(function(){
 }, 1000);
 
 setTimeout(function(){
-    alert("Lesson is started!!!!");
+    alert("Let's start the lesson!!!!!!");
     clearInterval(clock);
 }, futureTime);
 
